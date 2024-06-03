@@ -26,8 +26,8 @@ while [[ $# -gt 0 ]]; do
       echo "-K --keyfile"
       echo "   provide your own keyfile in case GPG is being unhappy"
       echo "   trying to download keys."
-      echo "-k --keys_only 
-      echo     only do the key steps, assuming sources.list is already"
+      echo "-k --keys_only "
+      echo "    only do the key steps, assuming sources.list is already"
       echo "   written and where we expect it to be."
       shift # past argument
       shift # past value
@@ -52,7 +52,7 @@ if [ -z "$LFTP" ]; then
 fi
 ELINKS=$(which elinks)
 if [ -z "$ELINKS" ]; then
-  echo "Please install lftp"
+  echo "Please install elinks"
   exit 1
 fi
 arch="$(dpkg --print-architecture)"
